@@ -1,5 +1,7 @@
 # Download Postgres binary
 
+package "libreadline-dev"
+
 remote_file "/usr/local/src/postgresql-9.2.1.tar.gz" do
 source "http://ftp.postgresql.org/pub/source/v9.2.1/postgresql-9.2.1.tar.gz"
 end

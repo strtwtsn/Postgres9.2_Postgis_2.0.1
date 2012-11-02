@@ -26,6 +26,8 @@ createdb  -T template0 -O postgres -U postgres -E UTF8 template_postgis
 createlang plpgsql -U postgres -d template_postgis
 psql -d template_postgis -U postgres -f /usr/local/pgsql/share/contrib/postgis-2.0/postgis.sql
 psql -d template_postgis -U postgres -f /usr/local/pgsql/share/contrib/postgis-2.0/spatial_ref_sys.sql
+psql -d template_postgis -U postgres -f /usr/local/pgsql/share/contrib/postgis-2.0/rtpostgis.sql
+psql -d template_postgis -U postgres -f /usr/local/pgsql/share/contrib/postgis-2.0/topology.sql
 ldconfig
 EOH
 end
