@@ -6,7 +6,7 @@ remote_file "/usr/local/src/postgresql-9.2.1.tar.gz" do
 source "http://ftp.postgresql.org/pub/source/v9.2.1/postgresql-9.2.1.tar.gz"
 end
 
-# bash "Extract and install Postgres 9.2" do
+bash "Extract and install Postgres 9.2" do
 user "root"
 cwd "/usr/local/src"
 code <<-EOH

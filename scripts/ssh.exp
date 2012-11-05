@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+        set timeout 20
+        spawn ssh -o "StrictHostKeyChecking no" $Username@$IPaddress
+        expect "*assword: "
+        send "$Password\r"
+        interact
+exit
+
