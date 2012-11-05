@@ -6,7 +6,7 @@ remote_file "/usr/local/src/postgresql-9.2.1.tar.gz" do
 source "http://ftp.postgresql.org/pub/source/v9.2.1/postgresql-9.2.1.tar.gz"
 end
 
-bash "Extract and install Postgres 9.2" do
+# bash "Extract and install Postgres 9.2" do
 user "root"
 cwd "/usr/local/src"
 code <<-EOH
@@ -20,7 +20,21 @@ end
 
 user "postgres" do
 password "postgres"
+supports :manage_home => true
+home "/home/postgres"
 end
+
+
+bash "Set postgres paths" do
+user "root"
+code <<-EOH
+sudo echo "export LD_LIBRARY_PATH=/usr/local/pgsql/lib" | sudo tee -a ~postgres/.profile
+sudo echo "export PATH=$PATH:/usr/local/pgsql/bin" | sudo tee -a ~postgres/.profile
+source /etc/profile
+EOH
+end
+
+
 
 # Install startup script
 
