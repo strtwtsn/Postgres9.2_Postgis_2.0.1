@@ -2,14 +2,16 @@
 sudo apt-get -y update 
 sudo apt-get -y install wget
 cd /usr/local/src
-wget https://raw.github.com/strtwtsn/Postgres9.2_Postgis_2.0.1/master/scripts/ssh.exp
-chmod a+x /usr/local/src/ssh.exp
-wget https://raw.github.com/strtwtsn/Postgres9.2_Postgis_2.0.1/master/scripts/ssh.sh
-chmod a+x /usr/local/src/ssh.sh
-/usr/local/src/ssh.sh
+wget https://raw.github.com/strtwtsn/Postgres9.2_Postgis_2.0.1/master/scripts/apps.sh
+chmod a+x /usr/local/src/apps.sh
+https://raw.github.com/strtwtsn/Postgres9.2_Postgis_2.0.1/master/scripts/db.sh
+chmod a+x /usr/local/src/db.sh
 wget https://raw.github.com/strtwtsn/Postgres9.2_Postgis_2.0.1/master/scripts/findreplace.sh
+chmod a+x /usr/local/src/findreplace.sh
+https://raw.github.com/strtwtsn/Postgres9.2_Postgis_2.0.1/master/scripts/ssh.sh
+chmod a+x /usr/local/src/ssh.sh
 /usr/local/src/findreplace.sh
-wget https://raw.github.com/strtwtsn/Postgres9.2_Postgis_2.0.1/master/scripts/sshapps.exp
+/usr/local/src/ssh.sh
 apt-get -y update
 apt-get -y install build-essential zlib1g-dev libssl-dev libreadline-dev libyaml-dev git
 cd /usr/local/src

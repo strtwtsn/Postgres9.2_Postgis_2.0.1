@@ -1,1 +1,1 @@
-{ "run_list": [ "recipe[GDAL]","recipe[GEOS]","recipe[proj4]","recipe[postgres]","recipe[postgis]","recipe[dbexport]","recipe[apps-config]" ] }
+{ "run_list": [ "recipe[db-export]","recipe[apps-config]" ] }
